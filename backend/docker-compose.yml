@@ -23,6 +23,7 @@ services:
     # https://docs.spring.io/spring-boot/docs/3.0.4/reference/html/features.html#features.external-config.typesafe-configuration-properties.relaxed-binding.environment-variables
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://unideal:changeme@db:3306/unideal
+      SPRING_JPA_DATABASEPLATFORM: org.hibernate.dialect.MariaDBDialect
 
 volumes:
   unideal-db_data:
