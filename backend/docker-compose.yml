@@ -6,6 +6,8 @@ services:
       # MYSQL_ROOT_PASSWORD: changeme
       MYSQL_DATABASE: unideal
       MYSQL_USER: unideal
+
+      # this doesn't matter since this would be only accessible from internal network
       MYSQL_PASSWORD: changeme
       MARIADB_RANDOM_ROOT_PASSWORD: 1
     volumes:
