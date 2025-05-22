@@ -20,10 +20,17 @@ services:
     ports:
       - 10001:8080
     # Refer to this for environment setup:
-    # https://docs.spring.io/spring-boot/docs/3.0.4/reference/html/features.html#features.external-config.typesafe-configuration-properties.relaxed-binding.environment-variables
+    # https://docs.spring.io/spring-boot/docs/3.0.4/reference/html/features.html#features.external-config
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://unideal:changeme@db:3306/unideal
       SPRING_JPA_DATABASEPLATFORM: org.hibernate.dialect.MariaDBDialect
+      UNIDEAL_MAILER_FROM: noreply@unideal.kr
+      SPRING_MAIL_HOST: ${SPRING_MAIL_HOST}
+      SPRING_MAIL_PORT: ${SPRING_MAIL_PORT}
+      SPRING_MAIL_USERNAME: ${SPRING_MAIL_USERNAME}
+      SPRING_MAIL_PASSWORD: ${SPRING_MAIL_PASSWORD}
+      SPRING_MAIL_PROPERTIES_MAIL_SMTP_AUTH: true
+      SPRING_MAIL_PROPERTIES_MAIL_SMTP_STARTTLS_ENABLE: ${SPRING_MAIL_PROPERTIES_MAIL_SMTP_STARTTLS_ENABLE}
 
 volumes:
   unideal-db_data:
