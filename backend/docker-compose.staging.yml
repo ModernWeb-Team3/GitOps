@@ -1,7 +1,7 @@
 services:
   db:
     image: mariadb:latest
-    container_name: 'unideal-db'
+    container_name: 'unideal-db-stg'
     environment:
       # MYSQL_ROOT_PASSWORD: changeme
       MYSQL_DATABASE: unideal
@@ -11,7 +11,7 @@ services:
       MYSQL_PASSWORD: changeme
       MARIADB_RANDOM_ROOT_PASSWORD: 1
     volumes:
-      - unideal-db_data:/var/lib/mysql
+      - unideal-db-staging_data:/var/lib/mysql
   app:
     image: ghcr.io/modernweb-team3/backend:ec9821b
     restart: unless-stopped
@@ -26,7 +26,7 @@ services:
       SPRING_JPA_DATABASEPLATFORM: org.hibernate.dialect.MariaDBDialect
 
 volumes:
-  unideal-db_data:
+  unideal-db-staging_data:
 
 # DO NOT REMOVE! - Mitigation for MTU 1400
 networks:
