@@ -1,6 +1,6 @@
 services:
   db:
-    image: mariadb:latest
+    image: mysql:latest
     container_name: 'unideal-db-stg'
     environment:
       # MYSQL_ROOT_PASSWORD: changeme
@@ -9,7 +9,7 @@ services:
 
       # this doesn't matter since this would be only accessible from internal network
       MYSQL_PASSWORD: changeme
-      MARIADB_RANDOM_ROOT_PASSWORD: 1
+      MYSQL_RANDOM_ROOT_PASSWORD: 1
     volumes:
       - unideal-db-staging_data:/var/lib/mysql
   app:
