@@ -8,7 +8,7 @@ services:
       MYSQL_USER: unideal
 
       # this doesn't matter since this would be only accessible from internal network
-      MYSQL_PASSWORD: changeme
+      MYSQL_PASSWORD: unideal
       MYSQL_RANDOM_ROOT_PASSWORD: 1
     volumes:
       - unideal-db-staging_data:/var/lib/mysql
