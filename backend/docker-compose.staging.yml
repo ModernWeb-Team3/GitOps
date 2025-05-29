@@ -27,7 +27,7 @@ services:
   # Redis
   redis:
     image: redis:7.2.5
-    container_name: unideal-redis
+    container_name: unideal-redis-stg
 
 volumes:
   unideal-db-staging_data:
