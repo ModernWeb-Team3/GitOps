@@ -15,7 +15,7 @@ services:
     volumes:
       - unideal-db-staging_data:/var/lib/mysql
   app:
-    image: ghcr.io/modernweb-team3/backend:5f2b938
+    image: ghcr.io/modernweb-team3/backend:55c9d69
     restart: unless-stopped
     depends_on:
       - db
